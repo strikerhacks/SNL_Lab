@@ -1,4 +1,8 @@
 set ns [new Simulator]
+set nf [open out.nam w]
+$ns namtrace-all $nf
+
+
 set node_(s1) [$ns node]
 set node_(s2) [$ns node]
 set node_(r1) [$ns node]
@@ -71,7 +75,12 @@ proc finish {} {
 	exec cat temp.a >@ $f
 	close $f
 	exec xgraph -bb -tk -x time -y queue temp.queue &
-	exit 0
+global ns nf
+        $ns flush-trace
+        close $nf
+        exec nam out.nam
+        exit 0
+	
 }
 
 $ns run
