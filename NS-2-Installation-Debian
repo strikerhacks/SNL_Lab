@@ -1,0 +1,23 @@
+Install it by running the following command in your terminal:
+sudo apt-get install -y nam
+sudo apt-get install -y ns2
+sudo apt update
+
+( sudo not required if you are a root user)
+
+For X-Graph Installation:
+Just Copy Paste the below lines !!
+
+sudo apt install perl libxt-dev libx11-dev libxmu-dev
+wget http://archive.ubuntu.com/ubuntu/pool/universe/x/xgraph/xgraph_12.1-17_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11-6_1.6.4-3ubuntu0.2_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.27-3ubuntu1_amd64.deb
+sudo dpkg -i *.deb
+
+
+To check your installation Download red.tcl file and kindy follow the steps mentioned below.
+In the terminal:
+Check the present working directory by typing:  pwd
+Move to directory where you have downloaded red.tcl file. [ cd "directory name" ]
+Now type :        ns red.tcl
+Now, you can see Network simulator and x-graph working.
